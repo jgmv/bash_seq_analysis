@@ -2,7 +2,7 @@
 Miscellaneous bash scripts for analysis of sequence data.
 
 ### annotateFUNGuild.sh
-annotates taxonomy file using FUNGuild. Input file must include the following semicolon-separated columns: `group`, `kingdom`, `phylum`, `class`, `order`, `family`, `genus`, `species`.
+annotates taxonomy file using FUNGuild [(Nguyen et al. 2016)](https://doi.org/10.1016/j.funeco.2015.06.006). Input file must include the following semicolon-separated columns: `group`, `kingdom`, `phylum`, `class`, `order`, `family`, `genus`, `species`.
 
 ### annotateRepSeqs.sh
 annotates representative OTU sequences with OTU names.
