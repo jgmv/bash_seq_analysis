@@ -30,4 +30,5 @@ classifyITSseqs () {
   # create a copy of the taxonomy file without bootstrap values
   cp taxonomy_boot.csv taxonomy.csv
   sed -i 's/([^()]*)//g' taxonomy.csv
+  rm temp_seqs.fasta
 }
