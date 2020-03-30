@@ -18,7 +18,7 @@ extracts OTU representative sequences from OTU list and fasta sequences file.
 generates a list of OTUs from BlastClust output.
 
 ### otuList2mothur.sh
-transforms OTU list to mothur format for running command `classify.otu`
+transforms OTU list to mothur format for running command `classify.otu` in mothur.
 
 ### removeTaxonTag.sh
 removes taxon tags from UNITE taxonomy files and modifies the output.
