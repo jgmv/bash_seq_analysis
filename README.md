@@ -22,3 +22,6 @@ transforms OTU list to mothur format for running command `classify.otu` in mothu
 
 ### removeTaxonTag.sh
 removes taxon tags from UNITE taxonomy files and modifies the output.
+
+### taxonomyToTree.sh
+generates a tree from a taxonomy file using the script provided by [Tedersoo et al. (2018)](https://doi.org/10.1007/s13225-018-0401-0).
