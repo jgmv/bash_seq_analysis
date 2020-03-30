@@ -3,7 +3,7 @@
 # annotate taxonomy file with FUNGuild
 annotateFUNGuild () {
   # download FUNGuild
-  if test -f .scripts/FUNGuild/Guilds_v1.0.py
+  if test -f scripts/FUNGuild/Guilds_v1.0.py
   then
     echo "FUNGuild found"
   else
