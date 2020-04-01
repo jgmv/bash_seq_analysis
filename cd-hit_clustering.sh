@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # cluster sequences with cd-hit, and formats output
-cd-hit_clustering () {
+cd_hit_clustering () {
   if [ -x "$(command -v cdhit)" ]
   then
     printf "cdhit found\\n"
