@@ -8,7 +8,7 @@ annotates taxonomy file using FUNGuild [(Nguyen et al. 2016)](https://doi.org/10
 annotates representative OTU sequences with OTU names.
 
 ### cd-hit_clustering.sh
-clusters sequences into OTUs using CD-HIT, and formtats the output files.
+clusters sequences into OTUs using CD-HIT and formats the output files.
 
 ### classifyITSseqs.sh
 classifies fungal ITS sequences against records in the [UNITE](https://unite.ut.ee/) database of reference ITS sequences [(Kõljalg et al. 2005)](https://doi.org/10.1111/j.1469-8137.2005.01376.x) using the Naïve Bayesian Classifier tool [(Wang et al. 2007)](https://doi.org/10.1128/AEM.00062-07) implemented in mothur [(Schloss et al. 2009)](https://doi.org/10.1128/AEM.01541-09). Requires system-wide access to mothur. 
