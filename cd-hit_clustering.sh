@@ -27,7 +27,7 @@ cd-hit_clustering () {
   sed -i 's/^ *//;s/ *$//;s/  */ /;' .temp.clstr
 
   # generate clusters tab
-  otuList .temp.clstr $3.txt
+  otuList .temp.clstr $3.csv
 
   # delete temporaty file
   rm .temp.clstr
