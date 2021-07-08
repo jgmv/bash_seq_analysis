@@ -3,7 +3,7 @@
 # annotate taxonomy file with FUNGuild
 annotateFUNGuild () {
   # download FUNGuild
-  if test -f scripts/FUNGuild/Guilds_v1.0.py
+  if test -f scripts/FUNGuild/Guilds_v1.1.py
   then
     echo "FUNGuild found"
   else
@@ -17,7 +17,7 @@ annotateFUNGuild () {
   #sed -i 's/;/|/g' taxonomy_temp.csv
 
   # run FUNGuild
-  python scripts/FUNGuild/Guilds_v1.0.py -otu taxonomy_temp.csv
+  python scripts/FUNGuild/Guilds_v1.1.py -otu taxonomy_temp.csv
 
   # modify output file
   rm taxonomy_temp.csv
