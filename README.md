@@ -25,5 +25,25 @@ transforms OTU list to mothur format for running command `classify.otu` in mothu
 ### removeTaxonTag.sh
 removes taxon tags from UNITE taxonomy files and modifies the output.
 
+### taxAnnotation.sh
+taxonomically annotates rDNA sequences using a [Naive Bayesian Classifier (NBC)](https://doi.org/10.1128/AEM.00062-07) as implemented in [Mothur](https://mothur.org/) and a local BLAST against user-specified databases.
+Requires a system-wide installation of [Mothur](https://mothur.org/) (e.g. via `sudo apt install mothur`) and of [`ncbi-blast+`](https://blast.ncbi.nlm.nih.gov/doc/blast-help/downloadblastdata.html) (`sudo apt install ncbi-blast+`).
+
+Specify the reference databases to use in the `### parameters` section of the script, including sequence + taxonomy files for the NBC (e.g. available to download for [bacteria](https://mothur.org/wiki/silva_reference_files/)), [fungi](https://unite.ut.ee/repository.php) and [arbuscular mycorrhizal fungi](https://maarjam.ut.ee/?action=bDownload)) and a BLAST database for BLAST (available through [NCBI](https://ftp.ncbi.nlm.nih.gov/blast/db/)).
+In the latter case, it is possible to directly specify a FTP address to a database, and the script will auomatically download it. If providing a folder (e.g. `$HOME/db/BLAST`), ensure there is system wide access (add line `BLASTDB="$HOME/db/BLAST"` to your `~/.profile` or `~/.bashrc` files) and that it also contains the [`taxdb`](https://ftp.ncbi.nlm.nih.gov/blast/db/taxdb.tar.gz) database.
+
+The script can run by providing a fasta file as the `INPUT_SEQ` variable within the file, or using a positional argument. See examples with input file `example_ITS.fasta`:
+
+```bash
+# run with input file as parameter (modify 'INPUT_SEQ="example_ITS.fasta"' within file)
+bash taxAnnotation.sh
+
+# using positional argument
+bash taxAnnotation.sh example_ITS.fasta
+
+# specifying FTP address ('BLAST_DB="ftp://ftp.ncbi.nlm.nih.gov/blast/db/ITS_eukaryote_sequences.tar.gz"' within file)
+bash taxAnnotation.sh example_ITS.fasta
+```
+
 ### taxonomyToTree.sh
 generates a tree from a taxonomy file using the script provided by [Tedersoo et al. (2018)](https://doi.org/10.1007/s13225-018-0401-0). The input file must be separated by tabs.
