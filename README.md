@@ -39,10 +39,10 @@ The script can run by providing a fasta file as the `INPUT_SEQ` variable within 
 bash taxAnnotation.sh
 
 # using positional argument
-bash taxAnnotation.sh example_ITS.fasta
+bash taxAnnotation.sh examples/example_ITS.fasta
 
 # specifying FTP address ('BLAST_DB="ftp://ftp.ncbi.nlm.nih.gov/blast/db/ITS_eukaryote_sequences.tar.gz"' within file)
-bash taxAnnotation.sh example_ITS.fasta
+bash taxAnnotation.sh examples/example_ITS.fasta
 ```
 
 ### taxonomyToTree.sh
